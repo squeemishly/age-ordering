@@ -1,9 +1,9 @@
-class Object {
+class AgeOrdering {
   constructor() {
 
   }
 
-  
+
 }
 
-module.exports = Object;
+module.exports = AgeOrdering;

@@ -1,12 +1,12 @@
 const assert = require('chai').assert
-const Object = require('./codingChallenge')
+const AgeOrdering = require('./codingChallenge')
 
-describe('Object()', () => {
+describe('AgeOrdering()', () => {
   before( () => {
-    object = new Object
+    ao = new AgeOrdering
   })
 
-  it('', () => {
-
+  it('exists', () => {
+    assert(ao)
   })
 })
