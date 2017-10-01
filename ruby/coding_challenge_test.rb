@@ -50,4 +50,8 @@ class AgeOrderingTest < Minitest::Test
   def test_it_can_hashify_one_person
     assert_equal ({12 => ["Boudi"]}), age_ordering.hashify([["Boudi", 12]])
   end
+
+  def test_it_returns_the_names_of_two_people
+    assert_equal ({12 => ["Boudi"], 35 => ["Czarnecki"]}), age_ordering.hashify([["Boudi", 12], ["Czarnecki", 35]])
+  end
 end
