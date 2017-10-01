@@ -38,4 +38,8 @@ class AgeOrderingTest < Minitest::Test
   def test_it_can_output_the_name_with_the_age_for_one_person
     assert_equal ["Boudi (12)"], age_ordering.name_and_ages([["Boudi", 12]])
   end
+
+  def test_it_returns_the_names_of_two_people
+    assert_equal ["Boudi (12)", "Czarnecki (35)"], age_ordering.name_and_ages([["Boudi", 12], ["Czarnecki", 35]])
+  end
 end

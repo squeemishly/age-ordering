@@ -7,4 +7,10 @@ class AgeOrdering
       name[0]
     end
   end
+
+  def name_and_ages(arr)
+    arr.map do |person|
+      "#{person[0]} (#{person[1]})"
+    end
+  end
 end
