@@ -58,4 +58,8 @@ class AgeOrderingTest < Minitest::Test
   def test_it_can_hashify_two_people_of_the_same_age
     assert_equal ({12 => ["Boudi", "Czarnecki"]}), age_ordering.hashify([["Boudi", 12], ["Czarnecki", 12]])
   end
+
+  def test_it_can_hashify_and_sort_a_group_of_people_of_varying_and_duplicated_ages
+    assert_equal ({15=>["Stacy"], 24=>["Juan", "Steve", "Jill"], 32=>["Dom"], 33=>["Frank"]}), age_ordering.hashify(data)
+  end
 end
