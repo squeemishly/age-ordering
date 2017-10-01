@@ -22,6 +22,14 @@ class AgeOrdering {
       return `${person[0]} (${person[1]})`
     })
   }
+
+  hashify(arr) {
+    let hash = {}
+    arr.forEach(person => {
+      hash[person[1]] = [person[0]]
+    })
+    return hash
+  }
 }
 
 module.exports = AgeOrdering;
