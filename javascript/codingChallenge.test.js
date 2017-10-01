@@ -13,6 +13,10 @@ describe('AgeOrdering()', () => {
   })
 
   it('can output a single name', () => {
-    assert.equal("Boudi", ao.namify(singleName))
+    assert.deepEqual(["Boudi"], ao.namify(singleName))
+  })
+
+  it('can output a two names', () => {
+    assert.deepEqual(["Boudi", "Menace"], ao.namify(doubleName))
   })
 })

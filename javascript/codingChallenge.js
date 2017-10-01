@@ -1,6 +1,8 @@
 class AgeOrdering {
   namify(arr) {
-    return arr[0][0]
+    return arr.map(person => {
+      return person[0]
+    })
   }
 }
 
