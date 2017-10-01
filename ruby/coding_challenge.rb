@@ -18,7 +18,11 @@ class AgeOrdering
   def hashify(arr)
     hash = {}
     arr.map do |person|
-      hash[person[1]] = [person[0]]
+      if hash[person[1]]
+        hash[person[1]] << person[0]
+      else
+        hash[person[1]] = [person[0]]
+      end
     end
     hash
   end
