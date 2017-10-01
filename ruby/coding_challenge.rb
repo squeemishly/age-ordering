@@ -16,15 +16,9 @@ class AgeOrdering
   end
 
   def hashify(arr)
-    hash = {}
     sorted = arr.sort { |x, y| x[1] <=> y[1] }
-    sorted.map do |person|
-      if hash[person[1]]
-        hash[person[1]] << person[0]
-      else
-        hash[person[1]] = [person[0]]
-      end
+    sorted.each_with_object( {} ) do |person, result|
+      (result[person[1]] ||= []) << person[0]
     end
-    hash
   end
 end
