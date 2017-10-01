@@ -18,7 +18,9 @@ class AgeOrdering {
   }
 
   nameAndAgify(arr) {
-    return `${arr[0][0]} (${arr[0][1]})`
+    return arr.map(person => {
+      return `${person[0]} (${person[1]})`
+    })
   }
 }
 
