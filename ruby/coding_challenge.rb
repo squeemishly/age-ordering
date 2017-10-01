@@ -9,7 +9,8 @@ class AgeOrdering
   end
 
   def name_and_ages(arr)
-    arr.map do |person|
+    sorted = arr.sort { |x, y| x[1] <=> y[1] }
+    sorted.map do |person|
       "#{person[0]} (#{person[1]})"
     end
   end
