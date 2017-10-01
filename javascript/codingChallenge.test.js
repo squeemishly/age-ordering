@@ -31,4 +31,8 @@ describe('AgeOrdering()', () => {
   it('can output a list of names in order by their age', () => {
     assert.deepEqual(["Stacy", "Juan", "Steve", "Jill", "Dom", "Frank"], ao.namify(listy))
   })
+
+  it('can output a single name with its respective age', () => {
+    assert.equal("Boudi (12)", ao.nameAndAgify(singleName))
+  })
 })

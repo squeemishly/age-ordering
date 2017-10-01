@@ -16,6 +16,10 @@ class AgeOrdering {
     if (a[1] > b[1]) return 1;
     return 0
   }
+
+  nameAndAgify(arr) {
+    return `${arr[0][0]} (${arr[0][1]})`
+  }
 }
 
 module.exports = AgeOrdering;
