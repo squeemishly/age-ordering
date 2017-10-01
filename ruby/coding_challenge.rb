@@ -1,4 +1,4 @@
 require 'pry'
 
-class Object
+class AgeOrdering
 end
