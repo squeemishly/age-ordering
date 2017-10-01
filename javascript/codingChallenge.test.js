@@ -6,6 +6,7 @@ describe('AgeOrdering()', () => {
     ao = new AgeOrdering
     singleName = [["Boudi", 12]]
     doubleName = [["Boudi", 12], ["Menace", 33]]
+    doubleNameSingleAge = [["Boudi", 12], ["Menace", 12]]
     listy = [
               ['Frank', 33],
               ['Stacy', 15],
@@ -48,7 +49,11 @@ describe('AgeOrdering()', () => {
     assert.deepEqual({"12": ["Boudi"]}, ao.hashify(singleName))
   })
 
-  it('can return a hash of of people by age for a single person', () => {
+  it('can return a hash of of people by age for two people with different ages', () => {
     assert.deepEqual({"12": ["Boudi"], "33": ["Menace"]}, ao.hashify(doubleName))
+  })
+
+  it('can return a hash of of people by age for two people with the same age', () => {
+    assert.deepEqual({"12": ["Boudi", "Menace"]}, ao.hashify(doubleNameSingleAge))
   })
 })

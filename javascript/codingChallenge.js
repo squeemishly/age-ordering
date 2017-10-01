@@ -26,7 +26,11 @@ class AgeOrdering {
   hashify(arr) {
     let hash = {}
     arr.forEach(person => {
-      hash[person[1]] = [person[0]]
+      if (hash[person[1]]){
+        hash[person[1]].push(person[0])
+      } else {
+        hash[person[1]] = [person[0]]
+      }
     })
     return hash
   }
