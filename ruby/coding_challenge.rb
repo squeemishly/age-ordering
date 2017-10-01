@@ -14,4 +14,8 @@ class AgeOrdering
       "#{person[0]} (#{person[1]})"
     end
   end
+
+  def hashify(arr)
+    {arr[0][1] => [arr[0][0]]}
+  end
 end
